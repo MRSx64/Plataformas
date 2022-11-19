@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*
+{margin: 0;
+padding: 0;
+box-sizing: 0;
+font-family: 'Poppins', sans-serif;}
+
+
+body{
+    overflow-x: hidden;
+}
+h2{
+    color: rgb(61, 57, 57);
+}
+
+.container{
+    position: relative;
+    width: 100%;
+}
+.navegation{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: #003147;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.navegation ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.navegation ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+.navegation ul li:hover{
+   background: #8777a5;
+}
+.navegation ul li:nth-child(1):hover{
+    background: transparent;
+ }
+
+.navegation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+}
+.navegation ul li a:hover{
+    font-size: 18px;
+    font-weight: 600; 
+}
+.navegation ul li h2{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    padding: 20px 40px;
+    height: 100px;
+}
+.navegation ul li a .icon{
+    position: relative;
+    display: block;
+    padding: 0 5px;
+    min-width: 70px;
+    height: 60px;
+    line-height: 76px;
+    text-align: center;
+}
+.navegation ul li a .icon img{
+    width:24px;
+    height: 24px;
+}
+.navegation ul li a .title{
+   position: relative;
+   display: block;
+   padding: 0 10px;
+   height: 56px;
+   line-height: 62px;
+   white-space: nowrap;
+}
+.main{
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background: #8777a5;
+    transition: 0.5s;
+}
+.main .topbar .iconTop img{
+    width: 50%;
+    height: 50px;
+}
+.main .lookimMain{
+    width: 100%;
+    height: 46em;
+
+}
+.main .cardBox{
+    position: relative;
+    width: 96%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 40px;
+    
+}
+.cardBox .card{
+    position: relative;
+    background: #ffff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    border-radius: 14px;
+}
+.cardBox .card .cardName{
+    position: relative;
+    padding: 2px;
+    font-size: 2em;
+    font-weight: 500;
+    color: #999;
+}
+.cardBox .card .numbers{
+    position: relative;
+    font-size: 1.6em;
+    font-weight: 500;
+}
+.cardBox .iconBox{
+    position: relative;
+    width: 30px;
+    height: 20px;
+    font-size: 1.8em;
+    color: #999;
+}
+.main .descriptionBox{
+    position: relative;
+    width: 92%;
+    margin: 20px;
+    height: 64vh;
+    padding: 20px;
+    border-radius: 14px;
+    background: #ffff;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 40px;
+}
+.main .descriptionBox .card{
+    position: relative;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.main .jetimobMain{
+    width: 100%;
+    height: 46em;
+
+}
+.main .descriptionBoxAloh{
+    position: relative;
+    width: 92%;
+    margin: 20px;
+    height: 64vh;
+    padding: 20px;
+    border-radius: 14px;
+    background: #ffff;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 40px;
+}
+.main .descriptionBoxApresentame{
+    position: relative;
+    width: 92%;
+    margin: 20px;
+    height: 64vh;
+    padding: 20px;
+    border-radius: 14px;
+    background: #ffff;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 40px;
+}
+.main .descriptionBoxImobzi{
+    position: relative;
+    width: 92%;
+    margin: 20px;
+    height: 64vh;
+    padding: 20px;
+    border-radius: 14px;
+    background: #ffff;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 40px;
+}
+.main .descriptionBoxWebreal{
+    position: relative;
+    width: 92%;
+    margin: 20px;
+    height: 64vh;
+    padding: 20px;
+    border-radius: 14px;
+    background: #ffff;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 40px;
+}
+
