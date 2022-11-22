@@ -11,10 +11,8 @@
 <body>
     <div class="container">
         <div class="navegation">
-            <ul>
-                <li>
-                    <span class="title"><h2>Plataformas<br>Imobiliárias</h2></span>
-                </li>                 
+            <div class="theme"><span><h1>Plataformas Imobiliárias</h1></span></div>
+            <ul>                
                 <li>
                     <a href="#lookimMain">
                     <span class="icon"><i><img src="imagens/lookim_logo.png" alt=""></i></span>
@@ -59,9 +57,13 @@
                 </li> 
             </ul>
     </div>
-    <div class="main">
 
-        <section class="lookimMain" id="lookimMain" >
+    <div class="main">
+        <div class="topbar">
+            <div class="toggle" onclick="toggleMenu();"></div>
+        </div>
+        
+        <section class="pageCard" id="lookimMain" >
             <div class="cardBox">
                 <div class="card">
                     <div>
@@ -110,7 +112,7 @@
             </div>
         </section>
 
-        <section class="Apresenta.meMain" id="Apresenta.meMain" >
+        <section class="pageCard" id="Apresenta.meMain" >
             <div class="cardBox">
                 <div class="card">
                     <div>
@@ -197,7 +199,7 @@
             </div>
         </section>
 
-        <section class="ImobziMain" id="ImobziMain" >
+        <section class="pageCard" id="ImobziMain" >
             <div class="cardBox">
                 <div class="card">
                     <div>
@@ -260,7 +262,7 @@
             </div>
         </section>
     
-    <section class="Aloh.inMain" id="Aloh.inMain">
+    <section class="pageCard" id="Aloh.inMain">
         <div class="cardBox"> 
             <div class="card">
                 <div>
@@ -324,7 +326,7 @@
         </div>
     </section>
 
-    <section class="JetimobMain" id="JetimobMain">
+    <section class="pageCard" id="JetimobMain">
         <div class="cardBox">
             <div class="card">
                 <div>
@@ -382,7 +384,7 @@
         </div>
     </section>
 
-    <section class="WebrealMain" id="WebrealMain" >
+    <section class="pageCard" id="WebrealMain" >
         <div class="cardBox">
             <div class="card">
                 <div>
@@ -443,7 +445,7 @@
         </div>
     </section>
 
-    <section class="TecimobMain" id="TecimobMain" >
+    <section class="pageCard" id="TecimobMain" >
         <div class="cardBox">
             <div class="card">
                 <div>
@@ -504,5 +506,20 @@
     </section>
 
     </div>
+
+    <script>
+        function toggleMenu() {
+            let toggle = document.querySelector('.toggle')
+            let navegation = document.querySelector('.navegation')
+            let main = document.querySelector('.main')
+
+            toggle.classList.toggle('active')
+            navegation.classList.toggle('active')
+            main.classList.toggle('active')
+
+        }
+
+    </script>
+
 </body>
 </html>

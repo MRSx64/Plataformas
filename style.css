@@ -10,6 +10,12 @@ font-family: 'Poppins', sans-serif;}
 body{
     overflow-x: hidden;
 }
+
+h1{
+    color: #fff;
+    font-size: 26px;
+}
+
 h2{
     color: rgb(61, 57, 57);
 }
@@ -26,12 +32,22 @@ h2{
     transition: 0.5s;
     overflow: hidden;
 }
+.navegation.active{
+    width: 80px;
+}
+.navegation .theme{
+    position: relative;
+    padding: 20px 50px 20px 90px;
+    text-align: end;
+}
+
 .navegation ul{
     position: absolute;
-    top: 0;
+    top: 8em;
     left: 0;
     width: 100%;
 }
+
 .navegation ul li{
     position: relative;
     width: 100%;
@@ -42,9 +58,6 @@ h2{
 .navegation ul li:hover{
    background: #8777a5;
 }
-.navegation ul li:nth-child(1):hover{
-    background: transparent;
- }
 
 .navegation ul li a{
     position: relative;
@@ -58,17 +71,7 @@ h2{
     font-size: 18px;
     font-weight: 600; 
 }
-.navegation ul li h2{
-    position: relative;
-    display: block;
-    width: 100%;
-    display: flex;
-    text-decoration: none;
-    text-align: center;
-    color: #fff;
-    padding: 20px 40px;
-    height: 100px;
-}
+
 .navegation ul li a .icon{
     position: relative;
     display: block;
@@ -90,6 +93,10 @@ h2{
    line-height: 62px;
    white-space: nowrap;
 }
+.navegation ul li a h2{
+    color: #fff;
+    margin: 20px;
+}
 .main{
     position: absolute;
     width: calc(100% - 300px);
@@ -98,14 +105,43 @@ h2{
     background: #8777a5;
     transition: 0.5s;
 }
-.main .topbar .iconTop img{
-    width: 50%;
-    height: 50px;
+.main.active{
+    width: calc(100% - 80px);
+    left: 80px;
 }
-.main .lookimMain{
+.main .topbar{
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16em;
+    z-index: 1;
+}
+.toggle{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    
+}
+.toggle::before{
+    content: '\f0c9';
+    font-family: fontAwesome;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    font-size: 24px;
+    text-align: center;
+    color: #111;
+}
+
+.main .pageCard{
     width: 100%;
     height: 46em;
-
+    padding-top: 3em;
 }
 .main .cardBox{
     position: relative;
@@ -148,7 +184,7 @@ h2{
     position: relative;
     width: 92%;
     margin: 20px;
-    height: 64vh;
+    height: 56vh;
     padding: 20px;
     border-radius: 14px;
     background: #ffff;
@@ -163,16 +199,12 @@ h2{
     justify-content: space-between;
     cursor: pointer;
 }
-.main .jetimobMain{
-    width: 100%;
-    height: 46em;
 
-}
 .main .descriptionBoxAloh{
     position: relative;
     width: 92%;
     margin: 20px;
-    height: 64vh;
+    height: 56vh;
     padding: 20px;
     border-radius: 14px;
     background: #ffff;
@@ -184,7 +216,7 @@ h2{
     position: relative;
     width: 92%;
     margin: 20px;
-    height: 64vh;
+    height: 58vh;
     padding: 20px;
     border-radius: 14px;
     background: #ffff;
@@ -196,7 +228,7 @@ h2{
     position: relative;
     width: 92%;
     margin: 20px;
-    height: 64vh;
+    height: 56vh;
     padding: 20px;
     border-radius: 14px;
     background: #ffff;
@@ -208,7 +240,7 @@ h2{
     position: relative;
     width: 92%;
     margin: 20px;
-    height: 64vh;
+    height: 56vh;
     padding: 20px;
     border-radius: 14px;
     background: #ffff;
