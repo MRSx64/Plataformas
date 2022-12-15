@@ -3,7 +3,7 @@
 *
 {margin: 0;
 padding: 0;
-box-sizing: 0;
+box-sizing: border-box;
 font-family: 'Poppins', sans-serif;}
 
 
@@ -124,6 +124,7 @@ h2{
     position: relative;
     width: 60px;
     height: 60px;
+    cursor: pointer;
     
 }
 .toggle::before{
@@ -145,7 +146,7 @@ h2{
 }
 .main .cardBox{
     position: relative;
-    width: 96%;
+    width: 94%;
     padding: 20px;
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -182,7 +183,7 @@ h2{
 }
 .main .descriptionBox{
     position: relative;
-    width: 92%;
+    width: 90%;
     margin: 20px;
     height: 56vh;
     padding: 20px;
@@ -200,9 +201,10 @@ h2{
     cursor: pointer;
 }
 
-.main .descriptionBoxAloh{
+
+.main .descriptionCard{
     position: relative;
-    width: 92%;
+    width: 90%;
     margin: 20px;
     height: 56vh;
     padding: 20px;
@@ -212,40 +214,166 @@ h2{
     grid-template-columns: repeat(3,1fr);
     gap: 40px;
 }
-.main .descriptionBoxApresentame{
-    position: relative;
-    width: 92%;
-    margin: 20px;
-    height: 58vh;
-    padding: 20px;
-    border-radius: 14px;
-    background: #ffff;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 40px;
+
+
+
+/* responsive */
+
+@media (max-width: 992px) {
+
+    .navegation {
+        left:-300px;
+    }
+    .navegation.active {
+        left: 0;
+        width: 300px;
+    }
+    .main {
+        width: 100%;
+        left:0;
+    }
+    .main.active{
+        width: calc(100% - 300px);
+        left: 300px;
+    }
+    .main .descriptionCard {
+        width: 90%;
+        margin: 18px;
+        padding: 16px;  
+    }
+    h2{
+        font-size: 20px;
+    }
+    h3{
+        font-size: 18px;
+    }
+    p{
+        font-size: 14px;
+    }
 }
-.main .descriptionBoxImobzi{
-    position: relative;
-    width: 92%;
-    margin: 20px;
-    height: 56vh;
-    padding: 20px;
-    border-radius: 14px;
-    background: #ffff;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 40px;
+
+@media (max-width: 768px) {
+    .main .pageCard {
+        height: 45em;
+    }
+
+    .main .cardBox {
+        width: 93%;}
+
+.main .descriptionBox .card{
+    padding: 16px;
+   
 }
-.main .descriptionBoxWebreal{
-    position: relative;
-    width: 92%;
-    margin: 20px;
-    height: 56vh;
-    padding: 20px;
-    border-radius: 14px;
-    background: #ffff;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 40px;
+
+    .cardBox .card .cardName {
+        padding: 2px;
+        font-size: 1.4em;}
+
+        .cardBox .card .numbers {
+            font-size: 1.2em;}
+
+        .main .pageCard {
+                height: 40em;
+                padding-top: 3em;
+            }
+
+    .main .descriptionBox {
+    margin: 18px;
+    height: 66vh;
+    padding: 6px;
+    gap: 4px;
+}
+
+
+    .main .cardBox {
+        width: 94%;
+        padding: 12px;
+        gap: 20px;}
+
+
+.main .descriptionCard {
+    width: 90%;
+    margin: 12px;
+    padding: 10px;
+}
+
+
+    h2 {
+        font-size: 16px;
+    }
+
+    h3 {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .navegation{
+        width: 100%;
+        left: -100%;
+        z-index: 1000;
+    }
+    .navegation .active{
+        width: 100%;
+        left: 0;
+    }
+
+    .toggle.active{
+        z-index: 10000;
+    }
+    
+    .toggle.active::before {
+        color: #fff;
+    }
+
+    .main,
+    .main.active{
+        width: 100%;
+        left: 0;
+    }
+
+    .main .pageCard {
+        height: 48em;
+        padding-top: 3em;
+    }
+
+    .main .cardBox {
+        padding: 10px;
+        gap: 10px;}
+
+    .cardBox .card{
+        padding: 10px;
+    }
+
+    .cardBox .card .cardName {
+        padding: 1px;
+        font-size: 1em;
+    }
+    .cardBox .card .numbers {
+        font-size: 14px;}
+
+    .cardBox .iconBox{
+        width: 20px;
+        font-size: 1.2em;}
+
+        .main .descriptionBox{
+            margin: 8px;
+            height: 100vh;
+            grid-template-columns: repeat(1,1fr);
+
+        }
+        .main .descriptionCard {
+                height: 42em;
+                width: 89%;
+                margin: 10px;
+                padding: 8px;
+                grid-template-columns: repeat(1,1fr);
+                gap: 0;
+        }
+
+        
+
+
 }
 
